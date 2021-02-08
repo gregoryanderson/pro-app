@@ -19,7 +19,7 @@ const ProgressBarScreen = () => {
       setWidth("66%");
     }
     if (step === 3 && word === "next") {
-      setWidth("100%");
+      setWidth("99%");
     }
     if (step === 2 && word === "prev") {
       setWidth("0%");
