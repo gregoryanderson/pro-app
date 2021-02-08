@@ -3,10 +3,8 @@ import React, { useState } from "react";
 const ExpandingCardsScreen = () => {
   const [activePanel, setActivePanel] = useState(1);
 
-  console.log({ activePanel });
-
   return (
-    <div className="container">
+    <div className="expanding-cards-container">
       <div
         className={activePanel === 1 ? "active panel" : "panel"}
         style={{

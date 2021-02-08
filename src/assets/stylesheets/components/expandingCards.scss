@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
-.container {
+.expanding-cards-container {
+  font-family: "Muli";
   display: flex;
   width: 90vw;
 }
@@ -47,4 +48,3 @@
     display: none;
   }
 }
-
