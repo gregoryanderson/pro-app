@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.rotating-nav-body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #222;
+  background-color: #333;
+}
+
+.rotating-nav-container {
+  background-color: #fff;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+
+  .circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+
+    button {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100px;
+      background: transparent;
+      border: 0;
+      font-size: 26px;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button#open {
+      left: 60%;
+    }
+
+    button#close {
+      top: 60%;
+      transform: rotate(90deg);
+      transform-origin: top left;
+    }
+  }
+
+  nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+
+    ul {
+      list-style-type: none;
+      padding-left: 30px;
+
+      li {
+        font-family: "Lato", sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 40px 0;
+        transform: translateX(-100%);
+        transition: transform 2s ease-in;
+
+        span {
+          font-family: "Lato", sans-serif;
+          padding: 10px;
+        }
+
+        i {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+      }
+
+    }
+  }
+
+  nav ul li + li {
+    transform: translateX(-150%);
+    margin-left: 41px;
+  }
+
+  nav ul li + li + li {
+    transform: translateX(-200%);
+    margin-left: 69px;
+  }
+
+  .content {
+    max-width: 1000px;
+    margin: 50px auto;
+  }
+
+  .content img {
+    max-width: 60%;
+  }
+
+  .content h1 {
+    margin: 0;
+  }
+
+  .content h3 {
+    color: #555;
+    font-style: italic;
+  }
+
+  .content p {
+
+    color: #333;
+    line-height: 1.5;
+  }
+}
+
+.rotating-nav-container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.rotating-nav-container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+
+.rotating-nav-container.show-nav + nav li{
+  transform: translateX(0);
+  transition-delay: .3s;
+}
