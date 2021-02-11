@@ -4,6 +4,7 @@ import ExpandingCardsScreen from "./screens/ExpandingCardsScreen";
 import ProgressBarScreen from "./screens/ProgressBarScreen";
 import RotatingNavScreen from "./screens/RotatingNavScreen";
 import HiddenSearchScreen from "./screens/HiddenSearchScreen";
+import BlurryLoadingScreen from "./screens/BlurryLoadingScreen";
 import './assets/stylesheets/App.scss';
 
 const App = () => {
@@ -13,6 +14,8 @@ const App = () => {
       <Route path="/progress-bar" exact component={ProgressBarScreen} />
       <Route path="/rotating-nav" exact component={RotatingNavScreen} />
       <Route path="/hidden-search" exact component={HiddenSearchScreen} />
+      <Route path="/blurry-loading" exact component={BlurryLoadingScreen} />
+
 
     </Router>
   );
