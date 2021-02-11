@@ -1,13 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
-body {
-  background-color: #f6f6f6;
-}
-
-.progress-container {
+.progress-bar-body {
+  font-family: "Muli", sans-serif;
   text-align: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+
+  .overall-container {
+    text-align: center;
+  }
 
   .progress-bar-container {
+    text-align: center;
     display: flex;
     justify-content: space-between;
     position: relative;

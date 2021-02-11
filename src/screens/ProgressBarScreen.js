@@ -33,28 +33,30 @@ const ProgressBarScreen = () => {
   };
 
   return (
-    <div className="progress-container">
-      <div className="progress-bar-container">
-        <div className="progress" style={{ width: width }}></div>
-        <div className={step >= 1 ? "circle active" : "circle"}>1</div>
-        <div className={step >= 2 ? "circle active" : "circle"}>2</div>
-        <div className={step >= 3 ? "circle active" : "circle"}>3</div>
-        <div className={step >= 4 ? "circle active" : "circle"}>4</div>
+    <div className="progress-bar-body">
+      <div className="overall-container">
+        <div className="progress-bar-container">
+          <div className="progress" style={{ width: width }}></div>
+          <div className={step >= 1 ? "circle active" : "circle"}>1</div>
+          <div className={step >= 2 ? "circle active" : "circle"}>2</div>
+          <div className={step >= 3 ? "circle active" : "circle"}>3</div>
+          <div className={step >= 4 ? "circle active" : "circle"}>4</div>
+        </div>
+        <button
+          className="prev"
+          disabled={step === 1}
+          onClick={() => handleClick("prev", step)}
+        >
+          Previous
+        </button>
+        <button
+          className="prev"
+          disabled={step === 4}
+          onClick={() => handleClick("next", step)}
+        >
+          Next
+        </button>
       </div>
-      <button
-        className="prev"
-        disabled={step === 1}
-        onClick={() => handleClick("prev", step)}
-      >
-        Previous
-      </button>
-      <button
-        className="prev"
-        disabled={step === 4}
-        onClick={() => handleClick("next", step)}
-      >
-        Next
-      </button>
     </div>
   );
 };
